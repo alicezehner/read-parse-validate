@@ -1,6 +1,9 @@
 # ---------------------------------------------
 # import package to read json
+
 # ---------------------------------------------
+# python3 read_json.py
+# import json
 
 
 # ---------------------------------------------
@@ -8,17 +11,20 @@
 # ---------------------------------------------
 
 def readJson(file):
-    pass
+    with open(file) as p:
+        return json.load(p)
 
 # ---------------------------------------------
 #  call 'readJson', load salaries
 # ---------------------------------------------
-
+salaries = readJson('./data.json')
+#print(salaries)
 
 # ---------------------------------------------
 #  print all salaries
 # ---------------------------------------------
-
+for salary in salaries['data']:
+    print(salary[18])
 
 # ---------------------------------------------
 # loop through list, only print salary field
