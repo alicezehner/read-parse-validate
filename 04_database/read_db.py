@@ -4,11 +4,11 @@ import mysql.connector
 cnx = mysql.connector.connect(user='root',
     password='password',
     host='127.0.0.1',
-    database='sys',
+    database='Farm',
     auth_plugin='mysql_native_password')
 
 cursor = cnx.cursor()
-query = ("SHOW DATABASES")
+query = ("SELECT * FROM Customers")
 cursor.execute(query)
 
 #loop through data
